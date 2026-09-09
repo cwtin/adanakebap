@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#130b07">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Adana Kebap Evi | Admin Panel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <main class="admin-shell">
+    <section class="login-card" id="loginView">
+      <div class="logo">♨ <span>ADANA KEBAP <b>EVİ</b></span></div>
+      <p class="kicker">YÖNETİM PANELİ</p>
+      <h1>Admin Girişi</h1>
+      <p class="muted">Firebase Authentication'da oluşturduğun e-posta ve şifreyle giriş yap.</p>
+
+      <form id="loginForm">
+        <label>E-posta
+          <input id="email" type="email" autocomplete="username" required placeholder="admin@ornek.com">
+        </label>
+        <label>Şifre
+          <input id="password" type="password" autocomplete="current-password" required placeholder="••••••••">
+        </label>
+        <button type="submit" id="loginButton">GİRİŞ YAP</button>
+      </form>
+      <p class="status error" id="loginError" hidden></p>
+    </section>
+
+    <section class="panel" id="panelView" hidden>
+      <header class="panel-header">
+        <div>
+          <p class="kicker">ADANA KEBAP EVİ</p>
+          <h1>Menü Yönetimi</h1>
+          <p class="muted">Ürün adı, açıklaması ve fiyatını değiştir. Kaydettiğin değerler Firebase'de kalır.</p>
+        </div>
+        <div class="header-actions">
+          <a href="index.html" target="_blank" rel="noopener">MENÜYÜ AÇ</a>
+          <button class="ghost" id="logoutButton" type="button">ÇIKIŞ</button>
+        </div>
+      </header>
+
+      <div class="notice" id="notice" hidden></div>
+      <div class="product-admin-grid" id="adminProducts"></div>
+    </section>
+  </main>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>

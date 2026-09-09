@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#130b07">
+  <meta name="description" content="Adana Kebap Evi dijital menüsü. Izgara ve çorba çeşitlerini inceleyin, hızlıca sipariş verin.">
+  <title>Adana Kebap Evi | Dijital Menü</title>
+
+  <!-- Yazı tipleri internet bağlantısı varsa yüklenir; bağlantı yoksa sistem yazı tipi kullanılır. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="hero">
+    <nav class="topbar container" aria-label="Ana menü">
+      <a class="brand" href="#anasayfa" aria-label="Adana Kebap Evi ana sayfa">
+        <span class="brand-fire">♨</span>
+        <span>ADANA KEBAP <b>EVİ</b></span>
+      </a>
+      <a class="call-button" href="tel:+905309914301" aria-label="Telefonla sipariş ver">
+        <span>☎</span> ARA
+      </a>
+    </nav>
+
+    <div class="hero-content container" id="anasayfa">
+      <p class="eyebrow">MEŞE KÖMÜRÜNDE IZGARA LEZZETİ</p>
+      <h1>Ateşin başında<br><em>gerçek lezzet.</em></h1>
+      <p class="hero-text">Ustaların elinden, köz ateşinde pişen kebaplar ve sıcacık çorbalar.</p>
+      <div class="hero-actions">
+        <a class="primary-button" href="#menu">MENÜYÜ İNCELE <span>↓</span></a>
+        <a class="secondary-button" href="tel:+905309914301">0530 991 43 01</a>
+      </div>
+    </div>
+
+    <div class="embers" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+  </header>
+
+  <main id="menu">
+    <section class="menu-section container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">DİJİTAL MENÜ</p>
+          <h2>Bugün ne yiyelim?</h2>
+        </div>
+        <p>Ürün ara veya kategoriler arasında hızlıca geçiş yap.</p>
+      </div>
+
+      <div class="menu-tools">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="Menüde ara..." autocomplete="off">
+        </label>
+        <div class="category-tabs" id="categoryTabs" aria-label="Ürün kategorileri"></div>
+      </div>
+
+      <!-- Ürün kartları Firebase Realtime Database verilerinden otomatik olarak buraya eklenir. -->
+      <div class="product-grid" id="productGrid"></div>
+      <div class="empty-state" id="emptyState" hidden>
+        <span>⌕</span>
+        <h3>Ürün bulunamadı</h3>
+        <p>Başka bir kelimeyle tekrar aramayı dene.</p>
+      </div>
+    </section>
+
+    <section class="order-banner">
+      <div class="container order-content">
+        <div>
+          <p class="eyebrow">SİPARİŞ HATTI</p>
+          <h2>Siparişiniz<br>ateşten sofraya.</h2>
+        </div>
+        <a href="tel:+905309914301">
+          <span class="phone-icon">☎</span>
+          <span><small>HEMEN ARA</small><strong>0530 991 43 01</strong></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="brand footer-brand"><span class="brand-fire">♨</span><span>ADANA KEBAP <b>EVİ</b></span></div>
+      <p>Meşe kömüründe ızgara lezzeti.</p>
+      <p>© <span id="year"></span> Adana Kebap Evi</p>
+    </div>
+    <p class="cetinweb-credit">QR Menü altyapısı <a href="https://cetinweb.online" target="_blank" rel="noopener noreferrer">CETİNWEB</a> tarafından oluşturulmuştur.</p>
+  </footer>
+
+  <!-- Mobil cihazlarda her zaman görünen hızlı sipariş çubuğu. -->
+  <a class="mobile-order" href="tel:+905309914301"><span>☎</span> HEMEN SİPARİŞ VER</a>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

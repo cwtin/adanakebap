@@ -87,7 +87,7 @@ h1 em { color: var(--orange-light); font-style: normal; }
 .product-info { position: relative; z-index: 1; padding: 24px; }
 .product-card:not(.has-image) .product-info { padding: 0; }
 .product-card:hover { transform: translateY(-4px); border-color: rgba(238,87,29,.55); }
-.product-card::after { content: attr(data-symbol); position: absolute; right: -12px; bottom: -26px; color: rgba(238,87,29,.07); font-size: 120px; transform: rotate(-8deg); }
+.product-card::after { content: attr(data-symbol); position: absolute; right: -12px; bottom: -26px; color: rgba(238,87,29,.07); font-size: 120px; transform: rotate(-8deg); opacity: .07; filter: grayscale(1); pointer-events: none; z-index: 0; }
 .product-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; position: relative; z-index: 1; }
 .product-number { color: var(--orange-light); font-family: "Bebas Neue", Impact, sans-serif; font-size: 18px; letter-spacing: 1px; }
 .product-category { padding: 6px 9px; border: 1px solid var(--line); border-radius: 99px; color: var(--muted); font-size: 9px; font-weight: 800; letter-spacing: 1.2px; }
